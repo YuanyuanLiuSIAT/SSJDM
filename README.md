@@ -34,5 +34,5 @@ main.py:
 ```
 
 * `config` is the path to the config file. Our prescribed config files are provided in `configs/`.
-  ## Questions
-  If you have any problem, please contact 329107072@qq.com
+## Questions
+If you have any problem, please contact 329107072@qq.com
