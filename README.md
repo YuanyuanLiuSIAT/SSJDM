@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 
 ### Data Preparation
-To facilitate a quick start, we provide sample data, the sample data can be downloaded [here](https:).
+To facilitate a quick start, we provide sample data, the sample data can be downloaded [here](https://drive.google.com/drive/folders/1Qqh2rfnHahJNEmD3rLLhE-9HorAiX62M?usp=sharing).
 The undersampling mask of the sample data is provided in `mask/`.
 
 ### Pretrained checkpoints
