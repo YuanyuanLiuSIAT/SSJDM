@@ -27,7 +27,7 @@ The undersampling mask of the sample data is provided in `mask/`.
 
 ### Pretrained checkpoints
 
-All checkpoints are provided [here](https:).
+All checkpoints are provided [here](https:545h5).
 
 ### Usage instructions
 After setting up the environment, you can train and evaluate our models through main.py.
