@@ -1,0 +1,89 @@
+seed: 26
+gpu_id: "4"
+## weights of different losses
+mse: 0.6
+
+mode:
+  pre_training: true
+  training: false
+  testing: false
+
+pretraining:
+  batch_size: 1
+  n_epochs: 500
+  anneal_power: 2
+  num_workers: 1
+  sigmaN: 0.001
+  sigmaK: 10
+  selfacc: 6
+  mask: "uniform_rand"
+
+training:
+  batch_size: 1
+  n_epochs: 500
+  anneal_power: 2
+  num_workers: 1
+  weights: "/data0/shucong/code/SSJDM_contrast_code/self_diffusion_t1rho_clean/weights/pretrain/G_epoch-200.pkl"
+  selfacc: 6
+
+
+testing:
+  batch_size: 1
+  weights: "/data0/shucong/code/SSJDM_contrast_code/self_diffusion_t1rho_clean/weights/score/S_epoch-500.pkl"
+
+  mask:  "center"
+  acc: "6"
+  step_lr: 0.000003
+  n_steps_each: 4
+  denoise: true
+  num_workers: 1
+
+data:
+
+  dataset_name: "UIH_Cardiac"
+  channels: 22
+  image_size: [72,176]
+  logit_transform: false
+  uniform_dequantization: false
+  gaussian_dequantization: false
+  rescaled: false
+  num_workers: 1
+
+model:
+  model_POCS:
+    name: "POCS"
+    nch_in: 22
+    nch_out: 22
+    nch_ker: 64
+    is_pool: false
+    ema_rate: 0.999
+    LayerNo: 10
+    filter_size: 3
+    bias: false
+    pad: 1
+    ema: false
+    ema_rate: 0.999
+    prior_mu: [0, 0.01]
+    prior_rho: [-15, -14]
+
+
+  name: NCSNv2
+  sigma_begin: 50
+  num_classes: 266
+  ema: true
+  ema_rate: 0.999
+  spec_norm: false
+  sigma_dist: geometric
+  sigma_end: 0.01
+  normalization: InstanceNorm++
+  nonlinearity: elu
+  ngf: 128
+
+  
+optim:
+  weight_decay: 0.000
+  optimizer: "Adam"
+  lr: 0.0001
+  beta1: 0.9
+  amsgrad: true
+  eps: 0.00000001

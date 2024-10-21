@@ -1,0 +1,7 @@
+h5py==3.11.0
+mat73==0.65
+numpy==1.23.5
+PyYAML==6.0.1
+PyYAML==6.0.2
+scipy==1.14.1
+torch==2.4.0+cuda11.8
