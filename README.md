@@ -25,6 +25,10 @@ pip install -r requirements.txt
 To facilitate a quick start, we provide sample data, the sample data can be downloaded [here](https:).
 The undersampling mask of the sample data is provided in `mask\`.
 
+### Pretrained checkpoints
+
+All checkpoints are provided [here](https:).
+
 ### Usage instructions
 After setting up the environment, you can train and evaluate our models through main.py.
 
