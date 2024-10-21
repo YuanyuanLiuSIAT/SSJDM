@@ -22,7 +22,7 @@ pip install -r requirements.txt
 ```
 
 ### Data Preparation
-To facilitate a quick start, we provide sample data located at "./data".
+To facilitate a quick start, we provide sample data located at data/.
 
 ### Usage instructions
 After setting up the environment, you can train and evaluate our models through main.py.
